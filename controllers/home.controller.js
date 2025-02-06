@@ -7,7 +7,7 @@ const homeController = {
      * @param {express.Response} res 
      */
     index: (req, res) => {
-        res.sendStatus(501);
+        res.render('home/index');
     },
 
     /**
