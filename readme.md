@@ -79,6 +79,7 @@ npm i nodemon --savdev
 npm init \
 Creer fichier environnement .env \
 Creer le nodemon.json pour configurer le nodemon [Exemple] (https://github.com/remy/nodemon/blob/master/doc/sample-nodemon.md); \
+Creer fichier app.js \
 Modifier package.json : \
  -> Ajouter les scripts \
  -> Definir module \
