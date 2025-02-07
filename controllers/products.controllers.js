@@ -28,7 +28,17 @@ const productsController = {
      * @param {express.Response} res 
      */
     add: (req, res) => {
-        res.render('products/add', {  });
+        res.render('products/add');
+    },
+
+    /**
+     * add
+     * @param {express.Request} req 
+     * @param {express.Response} res 
+     */
+    addPost: (req, res) => {
+        console.log(req.body);
+        res.redirect('/products');
     }
 
 };
