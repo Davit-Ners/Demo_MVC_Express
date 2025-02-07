@@ -1,0 +1,16 @@
+.products-details-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1em;
+    align-items: center;
+    width: 40%;
+
+    border: 5px solid green;
+    border-radius: 20px;
+    margin: auto;
+
+    span {
+        color: orchid;
+    }
+}

@@ -9,7 +9,8 @@ const productsController = {
      */
     index: (req, res) => {
         const products = productModel.getAll();
-        res.render('products/index', { products });
+        const cssList = {name: 'products', name: 'products-detail'};
+        res.render('products/index', { products, cssList });
     },
 
     /**
@@ -19,8 +20,9 @@ const productsController = {
      */
     detail: (req, res) => {
         const product = productModel.getById(Number(req.params.id));
+        const cssList = {name: 'products-detail'};
         if (!product) res.render('error');
-        else {res.render('products/detail', { product });};
+        else {res.render('products/detail', { product, cssList });};
     },
 
     /**
