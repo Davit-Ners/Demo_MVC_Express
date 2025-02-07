@@ -1,3 +1,11 @@
 <section>
-    <p>hehe</p>
+    <h1>Hello details</h1>
+    <div class="products-details-page-container">
+        <h2>{{product.name}}</h2>
+        <p>{{product.desc}}</p>
+        <p>{{product.price}}€</p>
+        {{#if product.soldePrice}}
+            <p>SOLDES -> {{product.soldePrice}}€</p>
+        {{/if}}
+    </div>
 </section>
