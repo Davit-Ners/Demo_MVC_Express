@@ -19,7 +19,8 @@ const productsController = {
      */
     detail: (req, res) => {
         const product = productModel.getById(Number(req.params.id));
-        res.render('products/detail', { product });
+        if (!product) res.render('error');
+        else {res.render('products/detail', { product });};
     },
 
     /**
@@ -38,7 +39,14 @@ const productsController = {
      */
     addPost: (req, res) => {
         console.log(req.body);
-        res.redirect('/products');
+        if (!req.body.name || !req.body.price) {
+            res.redirect('/products/add');
+        }
+        else {
+            productModel.add(req.body);
+            console.log('Product added');
+            res.redirect('/products');
+        }
     }
 
 };

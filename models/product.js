@@ -50,9 +50,10 @@ const productModel = {
     },
 
     add: ({ name, desc, price, soldePrice }) => {
+        console.log({ name, desc, price, soldePrice });
 
         // Regle de validation dans la fake db
-        if (!name?.trim() || isNaN(price)) {
+        if (!name?.trim() || price < 0) {
             throw new Error('Insert Fail');
         }
         
@@ -60,8 +61,8 @@ const productModel = {
             id: context.nextId,
             name,
             desc,
-            price,
-            soldePrice
+            price: Number(price),
+            soldePrice: Number(soldePrice),
         };
 
         context.nextId++;

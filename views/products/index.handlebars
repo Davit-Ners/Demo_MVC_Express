@@ -4,9 +4,9 @@
         {{#each products}}
             <h2>{{this.name}}</h2>
             {{#if this.soldePrice}}
-                <p>{{this.soldePrice}}</p>
+                <p>{{this.soldePrice}}€</p>
             {{else}}
-                <p>{{this.price}}</p>
+                <p>{{this.price}}€</p>
             {{/if}}
             <a href="/products/details/{{this.id}}">Plus de details ici</a>
         {{/each}}
