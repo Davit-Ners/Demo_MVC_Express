@@ -16,8 +16,12 @@ const homeController = {
      * @param {express.Response} res 
      */
     about: (req, res) => {
-        res.render('home/about');
+        const title ='About';
+        const cssList = {name: 'about'};
+        console.log(cssList);
+        res.render('home/about', { title, cssList });
     }
+    
 
 
 };
