@@ -5,11 +5,7 @@
             {{#each products}}
                 <div class="product-card">
                     <h2>{{this.name}}</h2>
-                    {{#if this.soldePrice}}
-                        <p>{{this.soldePrice}}€</p>
-                    {{else}}
-                        <p>{{this.price}}€</p>
-                    {{/if}}
+                     <p>{{this.price}}€</p>
                     <a href="/products/details/{{this.id}}">Plus de details ici</a>
                 </div>
             {{/each}}
